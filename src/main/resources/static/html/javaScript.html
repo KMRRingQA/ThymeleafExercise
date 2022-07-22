@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Management</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!--Bootstrap CSS for profile modal -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- Imported CSS -->
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/headerFooter.css" rel="stylesheet">
+
+    <style id="parentStyle">
+        @media screen and (max-width:576px) {
+
+            /* MODAL - use this in the smallest screen view full screen no margins */
+            .modal-dialog {
+                margin: 0;
+                overflow-y: initial !important
+            }
+
+
+
+            .modal-body {
+                padding: 0rem;
+                padding-bottom: 450px;
+                overflow-y: auto;
+            }
+
+            /* MODAL */
+
+
+            .container-main {
+                height: 100%;
+                width: 100%;
+                padding: 0% 0% 0% 0%;
+
+            }
+
+            .div1 {
+                padding-right: 0%;
+                margin: 16px 10px;
+            }
+
+            .textMain1 {
+                font-size: 24px;
+                margin: 0px 0px 37px 10px;
+            }
+
+            .textMain2 {
+                font-size: 16px;
+                margin-left: 12px;
+            }
+
+            .button_primary {
+                font-size: 16px;
+                font-weight: bold;
+                width: 90%;
+                margin: 23px 0px 18px 15px;
+            }
+
+            .button_secondary {
+                font-size: 16px;
+                font-weight: bold;
+                width: 90%;
+
+            }
+
+            .div2 {
+                margin: 0px 10px;
+
+            }
+
+            .div3 {
+                border: 1px solid rgb(3, 1, 1);
+                margin: 41px 16px 6px 16px;
+                padding: 0px 10px 0px 10px;
+
+            }
+
+            .textMain5 {
+                margin: 0px 0px 9px 0px;
+            }
+
+            .textMain6 {
+                margin: 0px 0px 9px 0px;
+            }
+
+            .textMain7 {
+                margin: 0px 0px 15px 0px;
+            }
+
+            .textMain12 {
+                margin: 0px 0px 9px 0px;
+            }
+
+            .linkEdit {
+                float: right;
+            }
+
+            .FnBox {
+                background-color: rgb(255, 255, 255);
+                margin: 0px 12px 0px 24px;
+                width: 85%;
+
+            }
+
+            .LnBox {
+                background-color: rgb(255, 255, 255);
+                margin: 0px 12px 0px 24px;
+                width: 85%;
+
+            }
+
+            .EBox {
+                background-color: rgb(236, 234, 234);
+                ;
+                margin: 0px 12px 20px 24px;
+                width: 85%;
+            }
+
+            .formTitle {
+                margin: 0px 12px 0px 24px;
+                padding: 0px 0px;
+            }
+
+            .formTitle2 {
+                margin: 0px 12px 0px 12px;
+            }
+
+            .formTitle3 {
+                margin: 0px 12px 0px 12px;
+            }
+
+            .textMain3 {
+                color: rgb(102, 102, 102);
+                margin: 0px 12px;
+            }
+
+            .form-check {
+                margin: 0px 12px 0px 26px;
+            }
+
+            .textMain4 {
+                font-size: 15px;
+                text-align: center;
+                color: rgb(29, 112, 184);
+                margin-top: 29px;
+            }
+
+            .div7,
+            .div8,
+            .div9 {
+                border: 1px solid rgb(229, 227, 227);
+                margin: 0px 16px 10px;
+                padding: 0px 10px 0px 10px;
+            }
+
+            label {
+                float: left;
+                clear: none;
+                display: block;
+                padding: 0px 3em 0px 8px;
+            }
+
+            input[type=radio],
+            input.radio {
+                float: left;
+                clear: none;
+                margin: 2px 0 0 2px;
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+
+            /* MODAL - use this in the tablet screen view */
+            .modal-dialog.modal-full {
+                max-width: 80%;
+                max-height: 100%;
+                margin-left: 10%;
+                top: -4%;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                display: flex;
+                position: fixed;
+                z-index: 100000;
+                overflow-y: initial !important
+            }
+
+            .modal-body {
+                padding: 0rem;
+                overflow-y: auto;
+
+            }
+
+            /* MODAL */
+
+            .navbar {
+                max-width: 70%;
+                height: 4rem;
+            }
+
+            .footerStyle>.navbar {
+                max-width: 80%;
+            }
+
+            .headerStyle>.navbar {
+                max-width: 75%;
+            }
+
+            .container-main {
+                height: 50.58%;
+                width: 100%;
+                margin: 1.5%, 38.47%, 30.76%, 35.76%;
+                padding-left: 0%;
+            }
+
+            .container-text {
+                padding: 0% 0% 0% 0%;
+            }
+
+            .div1 {
+                width: 100%;
+                margin: 4% 0% 8% 4%;
+            }
+
+            .div2 {
+                width: 90%;
+                margin: 0% 0% 24% 4%;
+            }
+
+            .div3 {
+                width: 90%;
+                margin: 1% 8% 2% 4%;
+                padding-left: 2%;
+
+            }
+
+            .textMain3 {
+                Margin: 0% 0% 0% 4%;
+                padding: 4% 0% 0% 0%;
+            }
+
+            .form-check {
+                margin: 0% 0% 0% 0%;
+                padding: 0% 0% 0% 13%;
+                width: 100%;
+            }
+
+            label {
+                float: left;
+                clear: none;
+                display: block;
+                padding: 0px 3em 0px 8px;
+            }
+
+            input[type=radio],
+            input.radio {
+                float: left;
+                clear: none;
+                margin: 2px 0 0 2px;
+            }
+
+            .textMain5 {
+                Margin: 0% 0% 0%;
+                display: inline-block;
+                font-size: 14px;
+            }
+
+            .textMain6 {
+                Margin: 0% 0% 0%;
+                display: inline-block;
+                font-size: 14px;
+            }
+
+            .textMain7 {
+                Margin: 0% 0% 0%;
+                display: inline-block;
+                font-size: 14px;
+            }
+
+            .linkEdit {
+                font-size: 14px;
+            }
+
+            .FnBox {
+
+                width: 85%;
+                margin: 0% 0% 0% 4%;
+                float: left;
+            }
+
+            .LnBox {
+                width: 85%;
+                float: left;
+                margin: 0% 0% 0% 4%;
+            }
+
+            .formTitle {
+                width: 50%;
+                margin-left: 4%;
+            }
+
+            .formTitle2 {
+                float: left;
+                width: 50%;
+                margin: 0% 0% 0% 4%;
+                padding: 0% 0% 0% 0%;
+            }
+
+            .formTitle3 {
+                width: 15%;
+                margin: 0% 50% 0% 4%;
+                padding: 0% 0% 0% 0%;
+            }
+
+            .EBox {
+                width: 85%;
+                margin: 0% 0% 0% 4%;
+            }
+
+            .textMain4 {
+                width: 46%;
+                float: left;
+                margin: 2% 5% 0% 0%;
+                padding: 0% 0% 0%;
+            }
+
+            .button_primary {
+                width: 42%;
+                float: left;
+                margin: 0% 0% 0%;
+            }
+
+            .button_secondary {
+                width: 42%;
+                margin: 0% 0% 0% 4%;
+            }
+
+            .div5 {
+                width: 50%;
+                margin-right: 0%;
+                padding: 0% 0%;
+                float: right;
+            }
+
+            .div6 {
+                width: 100%;
+                margin: 0% 0% 0% 4%;
+                padding: 0% 0% 0% 4%;
+                display: inline-block;
+            }
+
+            .div7 {
+                width: 93%;
+                margin: 1% 10% 2% 2.5%;
+                padding-left: 2%;
+            }
+
+            .div8 {
+                width: 93%;
+                margin: 1% 1% 2% 2.5%;
+                padding-left: 2%;
+            }
+
+            .div9 {
+                width: 93%;
+                margin: 1% 1% 2% 2.5%;
+                padding-left: 2%;
+            }
+
+            #fName,
+            #lName,
+            #eName,
+            #manName,
+            #delete,
+            #buttons {
+                display: inline-block;
+            }
+
+            #buttons {
+                padding-left: 2%;
+            }
+
+            #radio1,
+            #radio2 {
+                margin: 0% 0% 0% 0%
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+
+            /* MODAL - used for laptop view */
+            .modal-dialog.modal-full {
+                max-width: 60%;
+                margin-left: 20%;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                display: flex;
+                position: fixed;
+                z-index: 100000;
+                overflow-y: initial !important
+            }
+
+            .modal-body {
+                padding: 0rem;
+                overflow-y: auto;
+            }
+
+            .formTitle {
+                float: left;
+                width: 50%;
+                margin: 0% 0% 0% 4%;
+                padding: 2% 0% 2% 0%;
+            }
+
+
+            .form-check {
+                margin: 8px 0px 0px 0px;
+                padding: 0% 0% 0% 10%;
+            }
+
+
+            .formTitle2 {
+                float: left;
+                width: 50%;
+                margin: 0% 0% 0% 4%;
+                padding: 2% 0% 2% 0%;
+            }
+
+            /* MODAL END */
+
+        }
+
+        @media only screen and (min-width: 1440px) {
+
+            .div1 {
+                margin-bottom: 4%;
+            }
+
+            .div2 {
+                margin-bottom: 14%;
+            }
+
+            .LnBox {
+                margin-bottom: 0%;
+            }
+
+            .EBox {
+                margin-top: 1%;
+            }
+
+            .textMain4 {
+                width: 26%;
+            }
+
+        }
+
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.container-text {
+    padding: 0% 6% 0% 10%;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid headerStyle">
+            <div class="navbar mx-auto">
+                <div class="col-lg-6 col-sm-6 accountCircleClass">
+                    <a href="profilePage.html/teamManagement" class="profile-modal" id="accountProfile">
+                        <img src="../resources/accountCircleBlack24dp.svg" class="accountCircle" alt="Account Circle"
+                            height="38px" width="46px"></a>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container container-main">
+            <div class="container container-text">
+                <table id="table">
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Pass/Fail</th>
+                    </tr>
+                </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-fluid footerStyle">
+            <div class="row navbar mx-auto">
+                <div class="col-lg-3 col-sm-3 footerLeft">
+                    <a href="./privacyAndCookies.html" class="linkStyle">
+                        <p class="footerText">Privacy & Cookies</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-sm-3 footerMiddle">
+                    <a href="./accessibility.html" class="linkStyle">
+                        <p class="footerText">Accessibility</p>
+                    </a>
+                </div>
+                <div class="col-lg-6 col-sm-6 footerRight">
+                </div>
+            </div>
+        </div>
+    </footer>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.22.0/axios.min.js"
+        integrity="sha512-m2ssMAtdCEYGWXQ8hXVG4Q39uKYtbfaJL5QMTbhl2kc6vYyubrKHhr6aLLXW4ITeXSywQLn1AhsAaqrJl8Acfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/teamManagement.js"></script>
+
+</body>
+
+</html>

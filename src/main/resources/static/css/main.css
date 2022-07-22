@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* || GENERAL STYLES */
+
+/*COMPLETE*/
+body {
+  background-color: rgba(245, 245, 245, 1);
+  /* margin-bottom: 83px; */
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
+
+}
+
+/*COMPLETE*/
+.container-main {
+  /* display: flex; */
+  background-color: rgba(255, 255, 255, 1);
+  width: 70.47%;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  /* min-height: 50vh; */
+  padding-top: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 3%;
+}
+
+/*COMPLETE*/
+section {
+  margin-top: 10px;
+}
+
+/*COMPLETE*/
+h1 {
+  font-family: "Open Sans";
+  font-style: normal;
+  color: rgba(0, 0, 0, 1);
+  font-size: 24px;
+  height: 36px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+/*COMPLETE*/
+h2 {
+  font-family: "Open Sans";
+  font-style: bold;
+  font-size: 21px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+}
+
+/*COMPLETE*/
+h3 {
+  font-family: "Open Sans";
+  font-style: bold;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+}
+
+/*COMPLETE*/
+h4 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
+
+/*COMPLETE*/
+h5 {
+  font-family: "Open Sans";
+  font-style: bold;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+}
+
+/* h6 {
+  font-family: "Open Sans";
+  color: rgba(0, 0, 0, 1);
+} */
+
+/*COMPLETE*/
+p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+}
+
+/* link color */
+/* a {
+  color: rgba(90, 131, 207, 1);
+  display: inline-flex;
+  text-decoration: none;
+} */
+
+/* visited link */
+/* a:visited {
+  color: rgba(29, 112, 184, 1);
+  display: inline-flex;
+  text-decoration: none;
+} */
+
+/* mouse over link */
+/* a:hover {
+  color: rgba(255, 255, 0, 1);
+  display: inline-flex;
+  text-decoration: none;
+} */
+
+/* selected link */
+/* a:active {
+  color: rgba(29, 112, 184, 1);
+  display: inline-flex;
+  text-decoration: none;
+} */
+
+/* || TYPOGRAPHY - included within general above */
+
+/* || HEADER AND MAIN NAVIGATION */
+
+/* ||UTILITY */
+
+/*COMPLETE*/
+.button_primary {
+  background-color: rgba(255, 234, 34, 1);
+  text-align: center;
+  margin: auto;
+  display: block;
+  line-height: 44px;
+  height: 44px;
+  width: 305px;
+  border-radius: 22px;
+  border: none;
+}
+
+/* COMPLETE TEST - Changed active status to white when button is clicked */
+.button_primary:active {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  margin: auto;
+  display: block;
+  line-height: 44px;
+  height: 44px;
+  width: 305px;
+  border-radius: 22px;
+  border: none;
+}
+
+/*COMPLETE*/
+/* .button_primary:active {
+  background-color: rgba(255, 234, 34, 1);
+  text-align: center;
+  margin: auto;
+  display: block;
+  line-height: 44px;
+  height: 44px;
+  width: 305px;
+  border-radius: 22px;
+  border: none;
+} */
+
+/*COMPLETE*/
+.button_primary:disabled {
+  background-color: rgba(232, 231, 231, 1);
+  text-align: center;
+  display: block;
+  line-height: 24px;
+  height: 44px;
+  width: 305px;
+  border-radius: 22px;
+}
+
+/*COMPLETE*/
+.button_secondary {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 22px;
+  border: 1px solid rgba(5, 5, 5, 1);
+  width: 305px;
+  height: 44px;
+  line-height: 24px;
+  text-align: center;
+  margin: auto;
+}
+
+/*COMPLETE*/
+.button_secondary:active {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 22px;
+  border: 1px solid rgba(5, 5, 5, 1);
+  width: 305px;
+  height: 44px;
+  line-height: 24px;
+  text-align: center;
+  margin: auto;
+}
+
+/*COMPLETE*/
+.button_secondary:disabled {
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(196, 196, 196, 1);
+  text-align: center;
+  display: block;
+  line-height: 24px;
+  height: 44px;
+  width: 305px;
+  border-radius: 22px;
+}
+
+
+
+/* @media only screen and (max-width: 500px) {
+  .container-main {
+    background-color: rgba(255, 255, 255, 1);
+    height: 100vh; 
+    width: 100%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+   }  */

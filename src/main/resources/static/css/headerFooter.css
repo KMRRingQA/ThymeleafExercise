@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+/* || HEADER AND FOOTER STYLES */
+
+.headerStyle, .footerStyle {
+    background-color: rgba(0, 0, 0, 1);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.accountCircle {
+    float: right;
+}
+
+.footerStyle {
+    position:absolute;
+    bottom: 0;
+ }
+
+.footerText {
+    color: rgb(255, 255, 255, 1);
+    margin-bottom: 0px;
+}
+
+.footerRightText {
+    text-align: right;
+}
+
+.linkStyle:link {
+    text-decoration: none;
+}
+
+/* Unsure if we want colour to change when hovered over */
+/* .linkStyle:hover {
+    color: rgba(255, 234, 34, 1);
+} */
+
+@media only screen and (max-width:768px) {
+
+    /* For mobile phones:  */
+    .headerStyle, .footerStyle {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+    /* Text positioning may need amending */
+    .footerRightText {
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width:574px) {
+    .footerText {
+        margin-bottom: 16px;
+    }
+
+    .footerRightText {
+        margin-top: 16px;
+    }
+
+    body {
+        padding-bottom: 200px;
+    }
+}
