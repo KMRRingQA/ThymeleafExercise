@@ -1,6 +1,13 @@
-use demo;
+delete from topic;
 
-delete from Person;
-
-insert into Person(first_name, last_name, score, email)
-values('Korbinian','Ring',76, 'Korbinian@gmail.com'),('asdf','asdf',70, 'asdf@gmail.com'),('qwert','qwert',54,'qwert@gmail.com');
+insert into topic(topic, description, sequence) values(
+'Topic 1',
+'example.',1),(
+'Topic 3',
+'description.',3),(
+'Topic 2',
+'some other stuff.',2),(
+'Topic 5',
+'asdf.',5),(
+'Topic 4',
+'qwert.',4);

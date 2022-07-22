@@ -1,35 +1,28 @@
 package com.example.demo.controllers;
 
-import com.example.demo.dtos.PersonDto;
-import com.example.demo.entities.Person;
-import com.example.demo.services.PersonService;
+import com.example.demo.dtos.TopicDto;
+import com.example.demo.services.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
+
+// Page Controller takes User object using thymeleaf and inserts information into HTML document
+// replacing the need for a lot of Javascript
 
 @Controller
 public class PageController {
 
-    private PersonService service;
+	@Autowired
+	TopicService topicService;
 
-    @Autowired
-    public PageController(PersonService service) {
-        this.service = service;
-    }
+	@GetMapping("/topicSelection")
+	public String topicPage(Model model) {
+		List<TopicDto> topicList = topicService.findAll();
+		model.addAttribute("topicList", topicList);
+		return "topic.html";
+	}
 
-    @GetMapping("/thymeleaf")
-    public String demoPage (Model model) {
-        List<PersonDto> personList = service.findAll();
-        model.addAttribute("personList", personList);
-        return "thymeleaf.html";
-    }
-
-    @GetMapping("/javaScript")
-    public String demoPage2 () {
-        return "javaScript.html";
-    }
 }
